@@ -28,3 +28,19 @@ function eliminarIzquierdo(indice){
     edadesIzquierda.splice(indice, 1);
     pintarArregloIzquierda();
 }
+
+function pintarArregloDerecha(){
+    let contenidoTabla = "";
+    let cmpTabla = document.getElementById("tablaDerecha");
+    let edad;
+
+    for(let indice = 0; indice < edadesDerecha.length; indice++){
+        edad = edadesDerecha[indice];
+        contenidoTabla += "<tr>";
+        contenidoTabla += "<td><button class='btn-mover' onclick='moverHaciaIzquierda(" + indice + ")'>⬅</button></td>";
+        contenidoTabla += "<td>" + edad + "</td>";
+        contenidoTabla += "<td><button class='btn-eliminar' onclick='eliminarDerecho(" + indice + ")'>Eliminar</button></td>";
+        contenidoTabla += "</tr>";
+    }
+    cmpTabla.innerHTML = contenidoTabla;
+}
