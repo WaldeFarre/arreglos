@@ -23,3 +23,8 @@ function pintarArregloIzquierda(){
     }
     cmpTabla.innerHTML = contenidoTabla;
 }
+
+function eliminarIzquierdo(indice){
+    edadesIzquierda.splice(indice, 1);
+    pintarArregloIzquierda();
+}
