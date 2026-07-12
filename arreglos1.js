@@ -24,11 +24,6 @@ function pintarArregloIzquierda(){
     cmpTabla.innerHTML = contenidoTabla;
 }
 
-function eliminarIzquierdo(indice){
-    edadesIzquierda.splice(indice, 1);
-    pintarArregloIzquierda();
-}
-
 function pintarArregloDerecha(){
     let contenidoTabla = "";
     let cmpTabla = document.getElementById("tablaDerecha");
@@ -43,6 +38,11 @@ function pintarArregloDerecha(){
         contenidoTabla += "</tr>";
     }
     cmpTabla.innerHTML = contenidoTabla;
+}
+
+function eliminarIzquierdo(indice){
+    edadesIzquierda.splice(indice, 1);
+    pintarArregloIzquierda();
 }
 
 function eliminarDerecho(indice){
