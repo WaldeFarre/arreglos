@@ -44,3 +44,8 @@ function pintarArregloDerecha(){
     }
     cmpTabla.innerHTML = contenidoTabla;
 }
+
+function eliminarDerecho(indice){
+    edadesDerecha.splice(indice, 1);
+    pintarArregloDerecha();
+}
