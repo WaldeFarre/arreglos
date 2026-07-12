@@ -49,3 +49,11 @@ function eliminarDerecho(indice){
     edadesDerecha.splice(indice, 1);
     pintarArregloDerecha();
 }
+
+function moverHaciaDerecha(indice){
+    let edad = edadesIzquierda[indice];
+    edadesDerecha.push(edad);
+    edadesIzquierda.splice(indice, 1);
+    pintarArregloIzquierda();
+    pintarArregloDerecha();
+}
